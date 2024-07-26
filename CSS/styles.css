@@ -1,0 +1,204 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header, footer {
+    background-color: #f8f8f8;
+    padding: 20px 0;
+}
+
+header h1, footer p {
+    text-align: center;
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px 0;
+}
+
+.services-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.services-table th, .services-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.services-table th {
+    background-color: #f2f2f2;
+}
+
+.gallery {
+    text-align: center;
+    padding: 20px;
+}
+
+.gallery h2 {
+    margin-bottom: 20px;
+    font-size: 2em; 
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 20px;
+    justify-content: center;
+}
+
+.gallery-item {
+    position: relative;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px; 
+    height: 400px; 
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.gallery-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.5s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.gallery .image-pair {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.gallery .image-container {
+    position: relative;
+    text-align: center;
+    max-width: 100%; 
+}
+
+.gallery .image-container img {
+    max-width: 100%; 
+    height: auto; 
+    display: none;
+}
+
+.gallery .image-container img:first-of-type {
+    display: block;
+}
+
+.gallery .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    user-select: none;
+}
+
+.gallery .arrow.left {
+    left: 10px;
+}
+
+.gallery .arrow.right {
+    right: 10px;
+}
+
+.contact-form .form-group {
+    margin-bottom: 15px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.contact-form input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+@media (max-width: 768px) {
+    .gallery .image-pair {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+/* Keyframes for the drop-down animation */
+@keyframes dropDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Header styling and animation */
+header {
+    animation: dropDown 1s ease-out;
+}
+

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!--
+    Student Name: Bennie A. Brewer
+    File Name: gallery.html
+    Today's Date: 07/22/2024
+-->
+
+<html lang="en">
+
+<head>
+    <title>Gallery: Take-A-Break Cleaning</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('header').addClass('animate-header');
+        });
+    </script>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1>Take-A-Break Cleaning | Gallery</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Section -->
+    <main class="container">
+        <section class="gallery">
+            <h2>Before & After</h2>
+            <div class="gallery-grid">
+                <!-- Microwave -->
+                <div class="gallery-item">
+                    <div class="image-container" id="microwave">
+                        <img src="../IMAGES/microwave_before.jpg" alt="A dirty microwave" class="gallery-image before">
+                        <img src="../IMAGES/microwave_after.jpg" alt="A clean microwave" class="gallery-image after">
+                        <div class="arrow left" onclick="showImage('microwave', 'before')">&#9664;</div>
+                        <div class="arrow right" onclick="showImage('microwave', 'after')">&#9654;</div>
+                    </div>
+                </div>
+                
+                <!-- Floor -->
+                <div class="gallery-item">
+                    <div class="image-container" id="floor">
+                        <img src="../IMAGES/floor_before.jpg" alt="A dirty floor" class="gallery-image before">
+                        <img src="../IMAGES/floor_after.jpg" alt="A clean floor" class="gallery-image after">
+                        <div class="arrow left" onclick="showImage('floor', 'before')">&#9664;</div>
+                        <div class="arrow right" onclick="showImage('floor', 'after')">&#9654;</div>
+                    </div>
+                </div>
+                
+                <!-- Outside -->
+                <div class="gallery-item">
+                    <div class="image-container" id="outside">
+                        <img src="../IMAGES/outside_before.jpg" alt="Dirty outside" class="gallery-image before">
+                        <img src="../IMAGES/outside_after.jpg" alt="Clean outside" class="gallery-image after">
+                        <div class="arrow left" onclick="showImage('outside', 'before')">&#9664;</div>
+                        <div class="arrow right" onclick="showImage('outside', 'after')">&#9654;</div>
+                    </div>
+                </div>
+                
+                <!-- Stairs -->
+                <div class="gallery-item">
+                    <div class="image-container" id="stairs">
+                        <img src="../IMAGES/stairs_before.jpg" alt="Dirty stairs" class="gallery-image before">
+                        <img src="../IMAGES/stairs_after.jpg" alt="Clean stairs" class="gallery-image after">
+                        <div class="arrow left" onclick="showImage('stairs', 'before')">&#9664;</div>
+                        <div class="arrow right" onclick="showImage('stairs', 'after')">&#9654;</div>
+                    </div>
+                </div>
+                
+                <!-- Stove -->
+                <div class="gallery-item">
+                    <div class="image-container" id="stove">
+                        <img src="../IMAGES/stove_before.jpg" alt="A dirty stove" class="gallery-image before">
+                        <img src="../IMAGES/stove_after.jpg" alt="A clean stove" class="gallery-image after">
+                        <div class="arrow left" onclick="showImage('stove', 'before')">&#9664;</div>
+                        <div class="arrow right" onclick="showImage('stove', 'after')">&#9654;</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Take-A-Break Cleaning Services</p>
+        </div>
+    </footer>
+
+    <!-- Link to JavaScript File -->
+    <script src="JAVA/scripts.js"></script>
+    
+    <!-- Inline JavaScript -->
+    <script>
+        function showImage(imageType, view) {
+            const beforeImage = document.querySelector(`#${imageType} .before`);
+            const afterImage = document.querySelector(`#${imageType} .after`);
+            
+            if (view === 'before') {
+                beforeImage.style.display = 'block';
+                afterImage.style.display = 'none';
+            } else {
+                beforeImage.style.display = 'none';
+                afterImage.style.display = 'block';
+            }
+        }
+
+        // Initialize with 'before' images displayed
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            showImage(item.querySelector('.image-container').id, 'before');
+        });
+    </script>
+</body>
+
+</html>
