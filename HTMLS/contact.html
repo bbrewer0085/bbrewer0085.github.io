@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!--
+    Student Name: Bennie A. Brewer
+    File Name: contact.html
+    Today's Date: 07/22/2024
+-->
+
+<html lang="en">
+
+<head>
+    <title>Contact Us: Take-A-Break Cleaning</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('header').addClass('animate-header');
+        });
+    </script>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1>Take-A-Break Cleaning | Contact Us</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Section -->
+    <main class="container">
+        <section class="contact-form">
+            <h2>Contact Us</h2>
+            <form action="TEMP.php" method="post">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required aria-required="true">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required aria-required="true">
+                </div>
+                <div class="form-group">
+                    <label>Preferred Contact Method:</label><br>
+                    <input type="radio" id="contact-phone" name="contact_method" value="phone" aria-label="Phone">
+                    <label for="contact-phone">Phone</label><br>
+                    <input type="radio" id="contact-email" name="contact_method" value="email" aria-label="Email">
+                    <label for="contact-email">Email</label>
+                </div>
+                <div class="form-group">
+                    <label>Services Interested In:</label><br>
+                    <input type="checkbox" id="service-residential" name="service" value="residential" aria-label="Residential Cleaning">
+                    <label for="service-residential">Residential Cleaning</label><br>
+                    <input type="checkbox" id="service-commercial" name="service" value="commercial" aria-label="Commercial Cleaning">
+                    <label for="service-commercial">Commercial Cleaning</label>
+                </div>
+                <div class="form-group">
+                    <label for="priority">Priority:</label>
+                    <select id="priority" name="priority">
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+        </section>
+        <div>
+            <h4><a href="https://bbrewer0085.github.io/your-repository-name/">Visit my website on GitHub Pages</a></h4>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Take-A-Break Cleaning Services</p>
+            
+        </div>
+    </footer>
+
+    <!-- Link to JavaScript File -->
+    <script src="../JAVA/scripts.js"></script>
+</body>
+
+</html>
